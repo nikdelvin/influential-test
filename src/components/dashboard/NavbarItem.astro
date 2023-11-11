@@ -1,0 +1,23 @@
+---
+export interface Props {
+    digit: number
+    description: string
+}
+
+const { digit, description } = Astro.props
+---
+
+<li class="nav-item mb-3 me-3 me-lg-6" role="presentation">
+    <a class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2 active" id="kt_stats_widget_16_tab_link_1" data-bs-toggle="pill" href="#kt_stats_widget_16_tab_1" aria-selected="true" role="tab">
+        <div class="d-flex flex-row">
+            <span class="fs-2 fw-bold">{digit}</span>
+            <div class="d-flex flex-column">
+                <div class="nav-icon mb-3">        
+                    <i class="ki-outline ki-car fs-1"></i>                                                                                                                                                                     
+                </div>
+                <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">{description}</span> 
+                <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
+            </div>
+        </div>
+    </a>
+</li>

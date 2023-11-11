@@ -1,0 +1,24 @@
+---
+export interface Props {
+    id: string
+    name: string
+    value: string
+    checked: boolean
+    title: string
+    description: string
+}
+
+const { id, name, value, title, description, checked } = Astro.props
+---
+
+<div class="fv-row fv-plugins-icon-container fv-plugins-bootstrap5-row-valid">
+    <input type="radio" class="btn-check" name={name} value={value} id={id} checked={checked ? 'checked' : undefined} />
+    <label class="btn btn-outline btn-outline-dashed btn-active-light-primary p-7 d-flex align-items-center mb-10" for={id}>
+        <slot/>
+        <span class="d-block fw-semibold text-start">                            
+            <span class="text-gray-900 fw-bold d-block fs-4 mb-2">{title}</span>
+            <span class="text-muted fw-semibold fs-6">{description}</span>
+        </span>
+    </label>
+    <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+</div>

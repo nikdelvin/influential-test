@@ -1,0 +1,24 @@
+---
+export interface Props {
+    title: string
+    description?: string
+    state: 'current' | 'completed' | 'pending'
+}
+
+const { title, description, state } = Astro.props
+---
+
+<div class={state} data-kt-stepper-element="content">
+    <div class="w-100">
+        <div class="pb-10 pb-lg-15">
+            <h2 class="fw-bold d-flex align-items-center text-gray-900">
+                {title}
+            </h2>
+            <div class="text-muted fw-semibold fs-6">
+                <slot name="description"/>
+                {description}
+            </div>
+        </div>
+        <slot/>
+    </div> 
+</div>

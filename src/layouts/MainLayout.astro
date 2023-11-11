@@ -1,0 +1,56 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Influential Test Task</title>
+		<link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"
+        />
+		<link
+            href="/assets/plugins/global/plugins.bundle.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="/assets/css/style.bundle.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <style
+            is:global
+        >
+            body {
+                font-family:
+                    Poppins,
+                    Helvetica,
+                    sans-serif !important;
+            }
+        </style>
+	</head>
+	<body data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default" data-kt-scrolltop="on" data-kt-sticky-app-header-minimize="on" data-kt-app-header-minimize="on">
+        <slot/>
+		<script
+            is:inline
+            src="/assets/plugins/global/plugins.bundle.js"
+        ></script>
+        <script
+            is:inline
+            src="/assets/js/scripts.bundle.js"
+        ></script>
+        <script
+            is:inline
+            src="/assets/js/custom/utilities/modals/create-account.js"
+        ></script>
+        <script
+            is:inline
+            src="/assets/plugins/custom/datatables/datatables.bundle.js"
+        ></script>
+        <script
+            is:inline
+            src="/assets/js/custom/utilities/tables/links.js"
+        ></script>
+	</body>
+</html>

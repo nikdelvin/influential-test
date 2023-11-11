@@ -1,0 +1,26 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import LinksTable from "../components/dashboard/LinksTable.astro";
+import TableRow from "../components/dashboard/TableRow.astro";
+import DashboardLayout from "../components/dashboard/DashboardLayout.astro";
+---
+
+<MainLayout>
+    <DashboardLayout>
+        <LinksTable>
+            {new Array(100).fill(true).map(row => (
+                <TableRow data={[
+                    { entry: Math.floor(Math.random() * 1000).toString(), type: 'link-dark' },
+                    { entry: '23 Sep 2023', type: 'text' },
+                    { entry: 'https://google.com', type: 'link-blue' },
+                    { entry: 'Google', type: 'text' },
+                    Math.random() > 0.5 ? { entry:  'Removed', type: 'badge-green' } : { entry: 'Delisted', type: 'badge-red' }
+                ]}/>
+            ))}
+        </LinksTable>
+    </DashboardLayout>
+</MainLayout>
+<script>
+    if (localStorage.getItem('jwt') == null) window.open('/auth/sign-up', '_self')
+</script>
+

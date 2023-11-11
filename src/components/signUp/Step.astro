@@ -1,0 +1,31 @@
+---
+export interface Props {
+    number: string
+    title: string
+    description: string
+    current?: boolean
+    last?: boolean
+}
+
+const { number, title, description, current, last } = Astro.props
+---
+
+<div class={`stepper-item ${current ? 'current' : ''}`} data-kt-stepper-element="nav">   
+    <div class="stepper-wrapper">
+        <div class="stepper-icon rounded-3">
+            <i class="ki-duotone ki-check fs-2 stepper-check"></i>       
+            <span class="stepper-number">{number}</span>
+        </div>
+        <div class="stepper-label">
+            <h3 class="stepper-title fs-2">
+                {title}
+            </h3>
+            <div class="stepper-desc fw-normal">
+                {description}
+            </div>
+        </div>
+    </div>
+    {last == null && (
+        <div class="stepper-line h-40px"></div>
+    )}
+</div>
