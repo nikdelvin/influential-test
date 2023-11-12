@@ -7,17 +7,21 @@ export interface Props {
 const { digit, description } = Astro.props
 ---
 
-<li class="nav-item mb-3 me-3 me-lg-6" role="presentation">
-    <a class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-80px h-85px pt-5 pb-2 active" id="kt_stats_widget_16_tab_link_1" data-bs-toggle="pill" href="#kt_stats_widget_16_tab_1" aria-selected="true" role="tab">
-        <div class="d-flex flex-row">
-            <span class="fs-2 fw-bold">{digit}</span>
-            <div class="d-flex flex-column">
-                <div class="nav-icon mb-3">        
-                    <i class="ki-outline ki-car fs-1"></i>                                                                                                                                                                     
+<div class="col-3">
+    <li class="nav-item mb-3 me-3 me-lg-6 bg-white" role="presentation">
+        <a class="nav-link btn btn-outline btn-flex btn-color-muted btn-active-color-primary flex-column overflow-hidden w-100 p-8 active" id="kt_stats_widget_16_tab_link_1" data-bs-toggle="pill" href="#kt_stats_widget_16_tab_1" aria-selected="true" role="tab">
+            <div class="d-flex flex-row w-100 mb-3">
+                <span class="text-dark fs-2qx fw-bold">{digit}</span>
+                <div class="nav-icon ms-auto">        
+                    <div class="d-flex flex-center w-40px h-40px rounded-3 bg-light-info bg-opacity-90">
+                        <i class="ki-duotone ki-setting-2 text-info fs-1"><span class="path1"></span><span class="path2"></span></i>
+                    </div>                                                                                                                                                                  
                 </div>
-                <span class="nav-text text-gray-800 fw-bold fs-6 lh-1">{description}</span> 
-                <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
             </div>
-        </div>
-    </a>
-</li>
+            <div class="d-flex flex-row w-100">
+                <span class="text-muted fw-bold fs-6">{description}</span> 
+            </div>
+            <span class="bullet-custom position-absolute bottom-0 w-100 h-4px bg-primary"></span>
+        </a>
+    </li>
+</div>

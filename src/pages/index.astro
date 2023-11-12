@@ -3,10 +3,19 @@ import MainLayout from "../layouts/MainLayout.astro";
 import LinksTable from "../components/dashboard/LinksTable.astro";
 import TableRow from "../components/dashboard/TableRow.astro";
 import DashboardLayout from "../components/dashboard/DashboardLayout.astro";
+import Navbar from "../components/dashboard/Navbar.astro";
+import NavbarItem from "../components/dashboard/NavbarItem.astro";
+import CountUp from "../components/test/CountUp.astro"
 ---
 
 <MainLayout>
     <DashboardLayout>
+        <Navbar>
+            <NavbarItem digit={252} description="Links Scraped"/>
+            <NavbarItem digit={252} description="Links Manually Checked"/>
+            <NavbarItem digit={252} description="Links Violations"/>
+            <NavbarItem digit={252} description="Links Removed"/>
+        </Navbar>
         <LinksTable>
             {new Array(100).fill(true).map(row => (
                 <TableRow data={[
